@@ -8,7 +8,7 @@ pipeline {
         buildDiscarder logRotator(artifactDaysToKeepStr: "30", artifactNumToKeepStr: "100", daysToKeepStr: "60", numToKeepStr: "200")
         checkoutToSubdirectory("mycheckout")
         authorizationMatrix("job1,myjob,testjob5")
-        copyArtifactPermission()
+        timeout()
         disableResume()
         durabilityHint("PERFORMANCE_OPTIMIZED")
         withEnv()
