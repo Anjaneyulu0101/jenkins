@@ -1,11 +1,11 @@
 pipeline {
     agent {
-        docker {
+        any {
             image "alpine:latest"
         }
     }
     options {
-        newContainerPerStage()
+        withCredentials()
     }
     stages {
         stage("Test1") {
