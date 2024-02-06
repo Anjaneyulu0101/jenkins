@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker {
+        any {
             image "alpine:latest"
         }
     }
@@ -8,10 +8,10 @@ pipeline {
         buildDiscarder logRotator(artifactDaysToKeepStr: "30", artifactNumToKeepStr: "100", daysToKeepStr: "60", numToKeepStr: "200")
         checkoutToSubdirectory("mycheckout")
         copyArtifactPermission("job1,myjob,testjob5")
-        disableConcurrentBuilds()
+        withEnv()
         disableResume()
         durabilityHint("PERFORMANCE_OPTIMIZED")
-        newContainerPerStage()
+        withEnv()
         parallelsAlwaysFailFast()
         preserveStashes()
         quietPeriod(30)
