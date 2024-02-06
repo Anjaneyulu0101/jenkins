@@ -5,7 +5,7 @@ pipeline {
         }
     }
     options {
-        withCredentials("1")
+        withCredentials("interface java.util.List")
              
     }
     stages {
