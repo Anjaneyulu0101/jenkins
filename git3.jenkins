@@ -5,7 +5,7 @@ pipeline {
             steps {
                 git(
                     url: "https://github.com/Anjaneyulu0101/jenkins.git",
-                    branch: "main",
+                    branch: "master",
                     changelog: true,
                     poll: true
                 )
