@@ -5,7 +5,7 @@ pipeline {
         }
     }
     options {
-        withCredentials("token")
+        withCredentials("1")
              
     }
     stages {
